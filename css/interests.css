@@ -1,0 +1,70 @@
+/* interests.css */
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  padding-bottom: 20px;
+}
+
+.interest-card {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  padding: 28px 26px;
+  position: relative;
+}
+
+/* the number watermark in corner */
+.interest-card::before {
+  content: attr(data-num);
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-family: var(--ff-mono);
+  font-size: 0.7rem;
+  color: var(--clr-border);
+  letter-spacing: 0.06em;
+}
+
+.int-card-top {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.int-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.int-card-top h2 {
+  font-family: var(--ff-head);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--clr-dark);
+}
+
+.int-card-body p {
+  font-size: 0.9rem;
+  color: var(--clr-mid);
+  line-height: 1.72;
+  margin-bottom: 12px;
+}
+
+.int-card-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* hover lift on cards */
+.interest-card:hover {
+  border-color: var(--clr-accent);
+}
+
+@media (max-width: 700px) {
+  .interests-grid {
+    grid-template-columns: 1fr;
+  }
+}

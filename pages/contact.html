@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Tim Cabello</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  </head>
+  <body>
+    <nav class="site-nav">
+      <div class="nav-inner">
+        <a href="../index.html" class="nav-logo">Tim<span>.</span>Cabello</a>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation"
+          aria-controls="navLinks"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="interests.html">Interests</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="page-wrap">
+      <div class="pg-header">
+        <div class="accent-rule"></div>
+        <h1>Contact</h1>
+        <p class="pg-sub">// send me a message</p>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-form-col">
+          <!-- geolocation bar -->
+          <div class="geo-bar" id="geoBar">
+            <span class="geo-label">Your location:</span>
+            <span id="geoResult" class="geo-value">--</span>
+            <button id="geoBtn" class="geo-btn">Detect location</button>
+          </div>
+
+          <div id="formWrap">
+            <form id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="field-group">
+                  <label for="fname"
+                    >First Name <span class="req">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="fname"
+                    name="fname"
+                    aria-describedby="fnameErr"
+                    autocomplete="given-name"
+                    placeholder="First name"
+                  />
+                  <span class="field-err" id="fnameErr"></span>
+                </div>
+                <div class="field-group">
+                  <label for="lname"
+                    >Last Name <span class="req">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="lname"
+                    name="lname"
+                    aria-describedby="lnameErr"
+                    autocomplete="family-name"
+                    placeholder="Last name"
+                  />
+                  <span class="field-err" id="lnameErr"></span>
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label for="email">Email <span class="req">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  aria-describedby="emailErr"
+                  autocomplete="email"
+                  placeholder="your@email.com"
+                />
+                <span class="field-err" id="emailErr"></span>
+              </div>
+
+              <div class="field-group">
+                <label for="subject">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="What's this about?"
+                />
+              </div>
+
+              <div class="field-group">
+                <label for="message">Message <span class="req">*</span></label>
+                <textarea
+                  id="message"
+                  name="message"
+                  aria-describedby="messageErr"
+                  rows="6"
+                  placeholder="Your message..."
+                ></textarea>
+                <span class="field-err" id="messageErr"></span>
+              </div>
+
+              <div class="field-group field-check">
+                <label class="check-label">
+                  <input type="checkbox" id="consent" name="consent" />
+                  <span>I confirm this message is from me</span>
+                </label>
+                <span class="field-err" id="consentErr"></span>
+              </div>
+
+              <button type="submit" class="btn-submit" id="submitBtn">
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <!-- success message, hidden until form submitted -->
+          <div
+            id="successMsg"
+            class="success-box"
+            style="display: none"
+            aria-live="polite"
+          >
+            <p class="success-head" id="successHead">Message received.</p>
+            <p id="successText"></p>
+            <p class="success-note">
+              (Note: this form connects to the EmailJS API to deliver messages.
+              If you don't hear back within a few days, feel free to reach out
+              directly.)
+            </p>
+          </div>
+        </div>
+
+        <aside class="contact-info-col">
+          <div class="cinfo-card">
+            <h3>Direct contact</h3>
+            <ul class="cinfo-list">
+              <li>
+                <span class="cinfo-label">Email</span>
+                <a href="mailto:tim@timcabello.com">tim@timcabello.com</a>
+              </li>
+              <li>
+                <span class="cinfo-label">LinkedIn</span>
+                <a
+                  href="https://www.linkedin.com/in/timothycabello/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >timothycabello</a
+                >
+              </li>
+              <li>
+                <span class="cinfo-label">Web</span>
+                <a
+                  href="https://www.timcabello.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >timcabello.com</a
+                >
+              </li>
+              <li>
+                <span class="cinfo-label">Location</span>
+                <span>Pueblo, CO</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="cinfo-card cinfo-note">
+            <p>
+              I'm generally available for professional inquiries, project
+              conversations, or just questions about the coursework on this
+              site. Response time is usually reasonable unless I'm in a deadline
+              crunch, which is most of the time.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>
+          &copy; 2026 Timothy Cabello &mdash; CS601 Term Project, Boston
+          University MET
+        </p>
+        <ul class="footer-links">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/timothycabello/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.timcabello.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >timcabello.com</a
+            >
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="../js/nav.js"></script>
+    <script src="../js/contact.js"></script>
+  </body>
+</html>

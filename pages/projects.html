@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Projects — Tim Cabello</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/projects.css" />
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Tim<span>.</span>Cabello</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-controls="navLinks" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="interests.html">Interests</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <main class="page-wrap">
+
+    <div class="pg-header">
+      <div class="accent-rule"></div>
+      <h1>Course Projects</h1>
+      <p class="pg-sub">// CS601 — Frontend Web Application Development, Summer 2026 &mdash; Prof. Christian Hur</p>
+    </div>
+
+    <p class="projects-intro">
+      Six assignments across six weeks. Each one introduced something I either
+      hadn't used before or had only touched in a limited way. Notes below are
+      honest about what was new and what gave me trouble.
+    </p>
+
+
+    <div class="proj-grid" id="projGrid">
+
+      <article class="proj-card">
+        <div class="proj-card-header">
+          <span class="proj-num">HW1</span>
+          <span class="proj-module">Module 1</span>
+        </div>
+        <h2>Interactive Web Form</h2>
+        <p class="proj-tech-line">
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">JavaScript</span>
+        </p>
+        <p class="proj-desc">
+          A subscription sign-up form with all validation written in JavaScript.
+          No HTML5 required attributes, no frameworks. Covers name fields, email format,
+          package selection, and a confirmation checkbox. On a successful submit the form
+          hides and shows a summary. Errors are written to the DOM rather than using alerts.
+        </p>
+        <div class="proj-notes">
+          <span class="notes-label">Notes</span>
+          Used arrow functions and array methods for the validation logic as the assignment
+          required. Getting the error clearing to behave right when someone edits a field
+          after failing validation took more debugging than I expected. Writing errors to the
+          DOM instead of alerts ended up looking a lot cleaner.
+        </div>
+      </article>
+
+
+      <article class="proj-card">
+        <div class="proj-card-header">
+          <span class="proj-num">HW2</span>
+          <span class="proj-module">Module 2</span>
+        </div>
+        <h2>Async Drag-and-Drop App</h2>
+        <p class="proj-tech-line">
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Fetch API</span>
+          <span class="tag">Drag &amp; Drop API</span>
+        </p>
+        <p class="proj-desc">
+          A fruit and vegetable sorting app that fetches JSON data asynchronously,
+          renders a mixed list of draggable items, and lets users sort them into two
+          labeled drop zones by category. JSON hosted on jsonbin.io.
+          Uses the native HTML5 drag-and-drop API, no libraries.
+        </p>
+        <div class="proj-notes">
+          <span class="notes-label">Notes</span>
+          Fetch with async/await was fairly straightforward. The drag-and-drop API was not.
+          Getting dragover and drop events to fire reliably took a lot of testing.
+          Tagging each element with its category early on turned out to be the thing
+          that made the drop zone validation actually work.
+        </div>
+      </article>
+
+
+      <article class="proj-card">
+        <div class="proj-card-header">
+          <span class="proj-num">HW3</span>
+          <span class="proj-module">Module 3</span>
+        </div>
+        <h2>CSS Portfolio Page</h2>
+        <p class="proj-tech-line">
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">Flexbox</span>
+          <span class="tag">CSS Grid</span>
+        </p>
+        <p class="proj-desc">
+          A single-page portfolio layout using CSS Grid for the main project section,
+          Flexbox for the header and footer, pseudo-classes and pseudo-elements for
+          interactive and decorative styling, and combinators and attribute selectors
+          for structural element targeting.
+        </p>
+        <div class="proj-notes">
+          <span class="notes-label">Notes</span>
+          CSS Grid finally made sense to me with this one. Before this assignment I was
+          using Flexbox for everything and forcing it to do things it wasn't great at.
+          The pseudo-element requirement made me think more carefully about what belongs
+          in the HTML and what's just presentation.
+        </div>
+      </article>
+
+
+      <article class="proj-card">
+        <div class="proj-card-header">
+          <span class="proj-num">HW4</span>
+          <span class="proj-module">Module 4</span>
+        </div>
+        <h2>Country Management System</h2>
+        <p class="proj-tech-line">
+          <span class="tag">TypeScript</span>
+          <span class="tag">DOM</span>
+          <span class="tag">Interfaces</span>
+          <span class="tag">Classes</span>
+          <span class="tag">Type predicates</span>
+        </p>
+        <p class="proj-desc">
+          A TypeScript app using interfaces, classes, inheritance, type assertions,
+          and type predicates to manage a list of country objects. Filters a mixed
+          array of RainyCountry, SnowyCountry, and IslandCountry objects down to
+          snowy ones and renders everything to the DOM with running totals.
+        </p>
+        <div class="proj-notes">
+          <span class="notes-label">Notes</span>
+          The interface and class structure mapped well to typed languages I'd worked
+          with before, so the adjustment wasn't dramatic. The type predicate pattern
+          was new. Compiler-level type checking turned out to be useful in practice,
+          not just in theory.
+        </div>
+      </article>
+
+
+      <article class="proj-card">
+        <div class="proj-card-header">
+          <span class="proj-num">HW5</span>
+          <span class="proj-module">Module 5</span>
+        </div>
+        <h2>Fresh Basket Grocery — Inventory App</h2>
+        <p class="proj-tech-line">
+          <span class="tag">React</span>
+          <span class="tag">Vite</span>
+          <span class="tag">JSX</span>
+          <span class="tag">Components</span>
+          <span class="tag">Props</span>
+          <span class="tag">JSON data</span>
+        </p>
+        <p class="proj-desc">
+          A React grocery store inventory app called Fresh Basket Grocery. Set up
+          with Vite and organized into Header, Footer, InventoryList, and InventoryItem
+          components. Inventory data in a JSON file, rendered dynamically.
+          Warm amber and cream color palette with a custom logo.
+        </p>
+        <div class="proj-notes">
+          <span class="notes-label">Notes</span>
+          The component model took some adjustment coming from writing pages directly.
+          Props made sense once the InventoryItem pattern clicked. Vite was
+          noticeably faster to get running than Create React App had been.
+        </div>
+      </article>
+
+
+      <article class="proj-card">
+        <div class="proj-card-header">
+          <span class="proj-num">HW6</span>
+          <span class="proj-module">Module 6</span>
+        </div>
+        <h2>Fresh Basket Grocery — Routing Update</h2>
+        <p class="proj-tech-line">
+          <span class="tag">React</span>
+          <span class="tag">React Router v6</span>
+          <span class="tag">Dynamic routing</span>
+          <span class="tag">useParams</span>
+          <span class="tag">useNavigate</span>
+        </p>
+        <p class="proj-desc">
+          Extended the HW5 inventory app with react-router-dom v6. Each item on the
+          home page links to a ProductDetail page via a unique SKU-based URL. Added
+          description and image fields to the inventory data, product images in
+          the public folder, and a back navigation link from the detail view.
+        </p>
+        <div class="proj-notes">
+          <span class="notes-label">Notes</span>
+          Dynamic routing with useParams was the main new concept. Getting the SKU
+          to match between the URL and the data lookup took a few tries.
+          useNavigate for the back button ended up being straightforward once
+          the routing structure was in place.
+        </div>
+      </article>
+
+    </div>
+
+
+    <div class="react-link-section">
+      <div class="accent-rule"></div>
+      <h2 class="react-link-heading">Interactive version — built with React</h2>
+      <p class="react-link-note">
+        The projects above are also rendered as a standalone React app using Vite.
+        Each card has an expandable notes section powered by component state.
+        That version lives in the <code>react-projects/</code> folder and runs separately.
+      </p>
+      <a href="../react-projects/index.html" class="btn-react-link" target="_blank" rel="noopener noreferrer">
+        Open React Projects App &#8594;
+      </a>
+    </div>
+
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Timothy Cabello &mdash; CS601 Term Project, Boston University MET</p>
+      <ul class="footer-links">
+        <li><a href="https://www.linkedin.com/in/timothycabello/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://www.timcabello.com/" target="_blank" rel="noopener noreferrer">timcabello.com</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+
+</body>
+</html>

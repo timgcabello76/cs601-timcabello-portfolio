@@ -1,0 +1,62 @@
+[
+  {
+    "id": "hw1",
+    "module": "Module 1",
+    "label": "HW1",
+    "title": "Interactive Web Form",
+    "tech": ["HTML5", "CSS3", "JavaScript"],
+    "desc": "A subscription sign-up form with client-side validation written entirely in JavaScript \u2014 no HTML5 required attributes, no frameworks. Validation covers name fields, email format, package selection, and a consent checkbox. On success, the form hides itself and shows a confirmation summary.",
+    "notes": "Used arrow functions and array methods for the validation logic. First time writing real-time DOM error messages rather than just an alert box."
+  },
+  {
+    "id": "hw2",
+    "module": "Module 2",
+    "label": "HW2",
+    "title": "Async Drag-and-Drop App",
+    "tech": ["HTML5", "CSS3", "JavaScript", "Fetch API", "Drag & Drop API"],
+    "desc": "A fruit-and-vegetable sorting app that fetches custom JSON data asynchronously and renders a mixed list of draggable items. Users sort them into labeled drop zones by category. JSON was hosted externally. The drag-and-drop behavior uses the native HTML5 API with no libraries.",
+    "notes": "The drag-and-drop API is surprisingly finicky. Getting dragover and drop to work consistently took more debugging than expected."
+  },
+  {
+    "id": "hw3",
+    "module": "Module 3",
+    "label": "HW3",
+    "title": "CSS Portfolio Page",
+    "tech": ["HTML5", "CSS3", "Flexbox", "CSS Grid"],
+    "desc": "A single-page portfolio layout demonstrating CSS Grid for the main project section, Flexbox for header and footer, pseudo-classes and pseudo-elements for interactive styling, and combinators and attribute selectors for structural styling.",
+    "notes": "CSS Grid finally clicked for me with this one. Had been using Flexbox for everything and wasn't comfortable with two-dimensional layout."
+  },
+  {
+    "id": "hw4",
+    "module": "Module 4",
+    "label": "HW4",
+    "title": "Country Management System",
+    "tech": ["TypeScript", "DOM", "Interfaces", "Classes", "Type predicates"],
+    "desc": "A TypeScript application using interfaces, classes, inheritance, type assertions, and type predicates to manage a list of country objects. Filters a mixed array of RainyCountry, SnowyCountry, and IslandCountry objects and renders totals to the DOM.",
+    "notes": "The interface and class structure mapped reasonably well to typed languages I had worked with before. The type predicate pattern was new. Compiler-level type checking ended up being useful in practice, not just on paper."
+  },
+  {
+    "id": "hw5",
+    "module": "Module 5",
+    "label": "HW5",
+    "title": "Fresh Basket Grocery \u2014 Inventory App",
+    "tech": ["React", "Vite", "JSX", "Components", "Props", "JSON data"],
+    "desc": "A React grocery store inventory app built with Vite, organized into Header, Footer, InventoryList, and InventoryItem components. Inventory data stored in a JSON file and rendered dynamically. Warm amber and cream color palette.",
+    "notes": "The component model took some adjustment coming from building pages directly. Props made sense once the InventoryItem pattern clicked. Vite was noticeably faster to get running than Create React App had been."
+  },
+  {
+    "id": "hw6",
+    "module": "Module 6",
+    "label": "HW6",
+    "title": "Fresh Basket Grocery \u2014 Routing Update",
+    "tech": [
+      "React",
+      "React Router v6",
+      "Dynamic routing",
+      "useParams",
+      "useNavigate"
+    ],
+    "desc": "Extended the HW5 app with react-router-dom v6. Each item links to a ProductDetail page via a unique SKU-based URL. Added description and image fields to inventory data and implemented navigation between home and detail views.",
+    "notes": "Dynamic routing with useParams was the main new concept. Getting the SKU to match between the URL and the data lookup took a couple tries. useNavigate for the back button was more straightforward than expected."
+  }
+]

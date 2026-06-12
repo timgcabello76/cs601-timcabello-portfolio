@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+/* ---- reset ---- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --clr-bg: #f2f0eb;
+  --clr-surface: #ffffff;
+  --clr-dark: #1c1c1e;
+  --clr-mid: #4a4a52;
+  --clr-muted: #8c8c96;
+  --clr-accent: #b85c2c;
+  --clr-accent2: #2c5f8a;
+  --clr-border: #d4d0c8;
+  --clr-tag-bg: #e8e4dc;
+
+  --ff-head: "Syne", sans-serif;
+  --ff-body: "IBM Plex Sans", sans-serif;
+  --ff-mono: "IBM Plex Mono", monospace;
+
+  --nav-h: 64px;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--clr-bg);
+  color: var(--clr-dark);
+  font-family: var(--ff-body);
+  line-height: 1.65;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--clr-accent2);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---- google fonts import ---- */
+
+/* NAV */
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--clr-dark);
+  height: var(--nav-h);
+  border-bottom: 3px solid var(--clr-accent);
+}
+
+.nav-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: var(--ff-body);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #fff;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+.nav-logo span {
+  color: var(--clr-accent);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  font-family: var(--ff-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #ccc;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--clr-accent);
+  text-decoration: none;
+}
+
+/* hamburger - mobile */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s;
+}
+
+/* FOOTER */
+
+.site-footer {
+  background-color: var(--clr-dark);
+  color: var(--clr-muted);
+  font-size: 0.8rem;
+  margin-top: 80px;
+  border-top: 3px solid var(--clr-accent);
+}
+
+.footer-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 28px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.footer-links a {
+  color: var(--clr-muted);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--clr-accent);
+}
+
+/* PAGE WRAPPER */
+
+.page-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 52px 24px 0;
+}
+
+/* page header block used on inner pages */
+.pg-header {
+  margin-bottom: 44px;
+  padding-bottom: 18px;
+  border-bottom: 2px solid var(--clr-border);
+}
+
+.pg-header h1 {
+  font-family: var(--ff-head);
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--clr-dark);
+  line-height: 1.15;
+}
+
+.pg-header .pg-sub {
+  color: var(--clr-muted);
+  font-size: 0.95rem;
+  margin-top: 6px;
+  font-family: var(--ff-mono);
+}
+
+/* accent rule used a few places */
+.accent-rule {
+  display: inline-block;
+  width: 38px;
+  height: 4px;
+  background: var(--clr-accent);
+  margin-bottom: 10px;
+}
+
+/* SKILL TAGS  (reused on resume + bio) */
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tag {
+  background: var(--clr-tag-bg);
+  color: var(--clr-mid);
+  font-family: var(--ff-mono);
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border: 1px solid var(--clr-border);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 720px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    background: var(--clr-dark);
+    padding: 16px 24px 24px;
+    gap: 16px;
+    border-bottom: 2px solid var(--clr-accent);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .pg-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
