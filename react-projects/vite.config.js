@@ -1,10 +1,11 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+  base: '/react-projects/dist/',
   build: {
-    outDir: "../pages/react-dist",
-    emptyOutDir: true,
-  },
-});
+    outDir: 'dist',
+    emptyOutDir: true
+  }
+})

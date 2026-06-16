@@ -12,7 +12,7 @@
   <nav class="site-nav">
     <div class="nav-inner">
       <a href="../index.html" class="nav-logo">Tim<span>.</span>Cabello</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-controls="navLinks" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span>
         <span></span>
         <span></span>
@@ -34,7 +34,7 @@
     <div class="pg-header">
       <div class="accent-rule"></div>
       <h1>Course Projects</h1>
-      <p class="pg-sub">// CS601 — Frontend Web Application Development, Summer 2026 &mdash; Prof. Christian Hur</p>
+      <p class="pg-sub">// CS601 — Frontend Web Application Development, Summer 2025 &mdash; Prof. Christian Hur</p>
     </div>
 
     <p class="projects-intro">
@@ -151,10 +151,11 @@
         </p>
         <div class="proj-notes">
           <span class="notes-label">Notes</span>
-          The interface and class structure mapped well to typed languages I'd worked
-          with before, so the adjustment wasn't dramatic. The type predicate pattern
-          was new. Compiler-level type checking turned out to be useful in practice,
-          not just in theory.
+          TypeScript was new going into this. The interface and class structure felt
+          familiar from other typed languages I've worked with over the years.
+          The type predicate pattern was something I hadn't seen before. Having the
+          compiler catch type errors before runtime was actually useful, not just
+          an academic exercise.
         </div>
       </article>
 
@@ -181,9 +182,10 @@
         </p>
         <div class="proj-notes">
           <span class="notes-label">Notes</span>
-          The component model took some adjustment coming from writing pages directly.
-          Props made sense once the InventoryItem pattern clicked. Vite was
-          noticeably faster to get running than Create React App had been.
+          First time building anything real with React. The component model took some
+          adjustment coming from just writing pages. Props made sense once the
+          InventoryItem pattern clicked. Vite was noticeably faster to get going than
+          Create React App the one time I'd tried that before.
         </div>
       </article>
 
@@ -209,26 +211,22 @@
         </p>
         <div class="proj-notes">
           <span class="notes-label">Notes</span>
-          Dynamic routing with useParams was the main new concept. Getting the SKU
-          to match between the URL and the data lookup took a few tries.
-          useNavigate for the back button ended up being straightforward once
-          the routing structure was in place.
+          Dynamic routing with useParams was the main new concept here. Getting the SKU
+          to match correctly between the URL and the data lookup took a few tries.
+          useNavigate for the back button ended up being simpler than I thought it
+          would be. This was probably the point where React started to feel less foreign.
         </div>
       </article>
 
     </div>
 
-
-    <div class="react-link-section">
-      <div class="accent-rule"></div>
-      <h2 class="react-link-heading">Interactive version — built with React</h2>
-      <p class="react-link-note">
-        The projects above are also rendered as a standalone React app using Vite.
-        Each card has an expandable notes section powered by component state.
-        That version lives in the <code>react-projects/</code> folder and runs separately.
+    <div class="react-launch-wrap">
+      <p class="react-launch-note">
+        HW5 and HW6 were built as a standalone React/Vite app. The version below
+        runs the compiled build embedded in this site.
       </p>
-      <a href="../react-projects/index.html" class="btn-react-link" target="_blank" rel="noopener noreferrer">
-        Open React Projects App &#8594;
+      <a href="../react-projects/dist/" class="react-launch-btn" target="_blank">
+        View React Projects App &rarr;
       </a>
     </div>
 
@@ -237,10 +235,10 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>&copy; 2026 Timothy Cabello &mdash; CS601 Term Project, Boston University MET</p>
+      <p>&copy; 2025 Timothy Cabello &mdash; CS601 Term Project, Boston University MET</p>
       <ul class="footer-links">
-        <li><a href="https://www.linkedin.com/in/timothycabello/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-        <li><a href="https://www.timcabello.com/" target="_blank" rel="noopener noreferrer">timcabello.com</a></li>
+        <li><a href="https://www.linkedin.com/in/timothycabello/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://www.timcabello.com/" target="_blank">timcabello.com</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>

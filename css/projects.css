@@ -100,53 +100,39 @@
   }
 }
 
-/* react app link section */
-.react-link-section {
-  margin-top: 48px;
-  padding-top: 32px;
-  border-top: 1px solid var(--clr-border);
-  padding-bottom: 8px;
+
+/* -- react launch section -- */
+.react-launch-wrap {
+  margin-top: 52px;
+  padding-top: 36px;
+  border-top: 1px solid #c9b99a;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
 }
 
-.react-link-heading {
-  font-family: var(--ff-head);
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--clr-dark);
-  margin: 10px 0 12px;
+.react-launch-note {
+  font-size: 15px;
+  color: #5a5040;
+  max-width: 580px;
+  line-height: 1.6;
+  margin: 0;
 }
 
-.react-link-note {
-  font-size: 0.875rem;
-  color: var(--clr-mid);
-  line-height: 1.68;
-  max-width: 620px;
-  margin-bottom: 18px;
-}
-
-.react-link-note code {
-  font-family: var(--ff-mono);
-  font-size: 0.82rem;
-  background: var(--clr-tag-bg);
-  padding: 1px 5px;
-  border: 1px solid var(--clr-border);
-}
-
-.btn-react-link {
+.react-launch-btn {
   display: inline-block;
-  background: var(--clr-accent2);
-  color: #fff;
-  font-family: var(--ff-body);
-  font-size: 0.875rem;
-  font-weight: 500;
-  padding: 10px 22px;
+  padding: 11px 26px;
+  background-color: #c05c1a;
+  color: white;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
   text-decoration: none;
-  letter-spacing: 0.02em;
-  transition: background 0.2s;
+  border-radius: 3px;
+  letter-spacing: 0.03em;
+  transition: background-color 0.2s ease;
 }
 
-.btn-react-link:hover {
-  background: #244f72;
-  text-decoration: none;
-  color: #fff;
+.react-launch-btn:hover {
+  background-color: #a04a10;
 }
